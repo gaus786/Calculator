@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="calculator">
+        <input type="display" id="inputBox" placeholder="0" />
+        <div>
+          <button class="button operator" onclick="displayval='';document.querySelector('#inputBox').value=displayval ">AC</button>
+          <button class="button operator" onclick="displayval=displayval.slice(0,-1); document.querySelector('#inputBox').value=displayval">DEL</button>
+          <button class="button operator" onclick="enterval('%')">%</button>
+          <button class="button operator" onclick="enterval('/')">/</button>
+        </div>
+        <div>
+          <button class="button" onclick="enterval('7')">7</button>
+          <button class="button" onclick="enterval('8')">8</button>
+          <button class="button" onclick="enterval('9')">9</button>
+          <button class="button operator" onclick="enterval('*')">*</button>
+        </div>
+        <div>
+          <button class="button" onclick="enterval('4')">4</button>
+          <button class="button" onclick="enterval('5')">5</button>
+          <button class="button" onclick="enterval('6')">6</button>
+          <button class="button operator" onclick="enterval('-')">-</button>
+        </div>
+        <div>
+          <button class="button" onclick="enterval('1')">1</button>
+          <button class="button" onclick="enterval('2')">2</button>
+          <button class="button" onclick="enterval('3')">3</button>
+          <button class="button operator" onclick="enterval('+')">+</button>
+        </div>
+
+        <div>
+          <button class="button" onclick="enterval('00')">00</button>
+          <button class="button" onclick="enterval('0')">0</button>
+          <button class="button" onclick="enterval('.')">.</button>
+          <button class="button equalBtn" onclick="displayval=eval(displayval)
+          document.querySelector('#inputBox').value=displayval">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
